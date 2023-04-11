@@ -1,0 +1,39 @@
+name = void
+protocol = udp
+triggers = triggers
+
+
+RKT_APRS_LAT  8 float signed big
+RKT_APRS_LONG 8 float signed big
+RKT_APRS_ALT  8 float signed big
+PAY_APRS_LAT  8 float signed big
+PAY_APRS_LONG 8 float signed big
+PAY_APRS_ALT  8 float signed big
+RKT_ALT_MAX   8 float signed
+PAY_ALT_MAX   8 float signed
+RKT_ZVELOCITY 8 float signed
+PAY_ZVELOCITY 8 float signed
+
+# telemetry packets
+8080 {
+    RKT_APRS_LAT
+    RKT_APRS_LONG
+    RKT_APRS_ALT
+}
+
+8081 {
+    PAY_APRS_LAT
+    PAY_APRS_LONG
+    PAY_APRS_ALT
+}
+
+# virtual telemetry
+virtual {
+    RKT_ALT_MAX
+    RKT_ZVELOCITY
+}
+
+virtual {
+    PAY_ALT_MAX
+    PAY_ZVELOCITY
+}

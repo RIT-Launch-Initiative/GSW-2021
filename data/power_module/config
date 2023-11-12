@@ -1,0 +1,27 @@
+name = power_module
+protocol = udp
+triggers = triggers
+
+
+CURR_BATT  4 float signed little
+VOLT_BATT  4 float signed little
+PWER_BATT  4 float signed little
+CURR_3V3   4 float signed little
+VOLT_3V3   4 float signed little
+PWER_3V3   4 float signed little
+CURR_5V0   4 float signed little
+VOLT_5V0   4 float signed little
+PWER_5V0   4 float signed little
+
+# telemetry packets
+6969 {
+    CURR_BATT
+    VOLT_BATT
+    PWER_BATT
+    CURR_3V3
+    VOLT_3V3
+    PWER_3V3
+    CURR_5V0
+    VOLT_5V0
+    PWER_5V0
+}

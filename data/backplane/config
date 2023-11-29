@@ -1,0 +1,84 @@
+name = backplane
+protocol = udp
+triggers = triggers
+
+# Radio Module
+GNSS_LATITUDE  8 float signed big
+GNSS_LONGITUDE 8 float signed big
+GNSS_ALTITUDE  8 float signed big
+
+# Power Module
+CURR_BATT  4 float signed little
+VOLT_BATT  4 float signed little
+PWER_BATT  4 float signed little
+CURR_3V3   4 float signed little
+VOLT_3V3   4 float signed little
+PWER_3V3   4 float signed little
+CURR_5V0   4 float signed little
+VOLT_5V0   4 float signed little
+PWER_5V0   4 float signed little
+VIN_VOLT   2 int   signed little
+
+# Sensor Module
+PRESS_MS5611 4 float signed little
+TEMP_MS5611  4 float signed little
+PRESS_BMP388 4 float signed little
+TEMP_BMP388  4 float signed little
+ACCEL_X      4 float signed little 
+ACCEL_Y      4 float signed little 
+ACCEL_Z      4 float signed little 
+MAGN_X       4 float signed little 
+MAGN_Y       4 float signed little 
+MAGN_Z       4 float signed little 
+GYRO_X       4 float signed little
+GYRO_Y       4 float signed little
+GYRO_Z       4 float signed little
+TEMP_TMP117  4 float signed little
+
+# Virtual Measurements
+VELOCITY_Z   8 float signed big 
+ALTITUDE     8 float signed big
+
+
+
+# telemetry packets
+10000 {
+    CURR_BATT
+    VOLT_BATT
+    PWER_BATT
+    CURR_3V3
+    VOLT_3V3
+    PWER_3V3
+    CURR_5V0
+    VOLT_5V0
+    PWER_5V0
+    VIN_VOLT
+}
+
+11000 {
+    GNSS_LATITUDE
+    GNSS_LONGITUDE
+    GNSS_ALTITUDE
+}
+
+12000 {
+    PRESS_MS5611
+    TEMP_MS5611
+    PRESS_BMP388
+    TEMP_BMP388
+    ACCEL_X
+    ACCEL_Y
+    ACCEL_Z
+    MAGN_X
+    MAGN_Y
+    MAGN_Z
+    GYRO_X
+    GYRO_Y
+    GYRO_Z
+    TEMP_TMP117
+}
+
+virtual {
+    VELOCITY_Z
+    ALTITUDE
+}

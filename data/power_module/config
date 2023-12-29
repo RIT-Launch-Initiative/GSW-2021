@@ -15,7 +15,7 @@ PWER_5V0   4 float signed little
 VIN_VOLT   2 int   signed little
 
 # telemetry packets
-6969 {
+10000 {
     CURR_BATT
     VOLT_BATT
     PWER_BATT

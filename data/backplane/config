@@ -42,8 +42,8 @@ GYRO_Z       4 float signed little
 TEMP_TMP117  4 float signed little
 
 # Virtual Measurements
-VELOCITY_Z   8 float signed big 
-ALTITUDE     8 float signed big
+#VELOCITY_Z   8 float signed big 
+#ALTITUDE     8 float signed big
 
 
 
@@ -90,7 +90,7 @@ ALTITUDE     8 float signed big
     LORA_SNR
 }
 
-virtual {
-    VELOCITY_Z
-    ALTITUDE
-}
+#virtual {
+#    VELOCITY_Z
+#    ALTITUDE
+#}

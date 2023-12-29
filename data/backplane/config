@@ -9,9 +9,9 @@ GNSS_ALTITUDE  8 float signed little
 # TODO ADD MORE GNSS DATA (num sats)
 
 # Radio Module (Receiver)
-RSSI           1 int signed little
-SNR            1 int signed little
-NUM_PACKETS    8 int unsigned little 
+LORA_RSSI           2 int signed little
+LORA_SNR            1 int signed little
+NUM_LORA_PACKETS    4 int unsigned little 
 
 # Power Module
 CURR_BATT  4 float signed little
@@ -82,6 +82,12 @@ ALTITUDE     8 float signed big
     GNSS_LATITUDE
     GNSS_LONGITUDE
     GNSS_ALTITUDE
+}
+
+12001 {
+    NUM_LORA_PACKETS
+    LORA_RSSI
+    LORA_SNR
 }
 
 virtual {

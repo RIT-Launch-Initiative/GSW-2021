@@ -38,7 +38,7 @@ using namespace countdown_clock;
 
 #define INFLUXDB_UDP_PORT 8089
 // #define INFLUXDB_ADDR "127.0.0.1"
-#define INFLUXDB_HOST "influx.local"
+#define INFLUXDB_HOST "http://influx.local"
 
 #define MILLISEC_PER_SEC     1000
 #define MICROSEC_PER_SEC     1000000

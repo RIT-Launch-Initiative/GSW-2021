@@ -11,6 +11,7 @@
 #include "lib/dls/logger.h"
 #include <string>
 #include <iostream>
+#include <cstdint>
 
 namespace dls {
 

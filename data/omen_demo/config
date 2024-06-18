@@ -6,7 +6,6 @@ triggers = triggers
 GNSS_LATITUDE  8 float signed little
 GNSS_LONGITUDE 8 float signed little
 GNSS_ALTITUDE  4 float signed little
-# TODO ADD MORE GNSS DATA (num sats)
 
 # Radio Module (Receiver)
 LORA_RSSI           2 int signed little
@@ -42,9 +41,7 @@ MAGN_X       4 float signed little
 MAGN_Y       4 float signed little 
 MAGN_Z       4 float signed little 
 
-# Virtual Measurements
-#VELOCITY_Z   8 float signed big 
-#ALTITUDE     8 float signed big
+POTATO_ADC   4 float signed big
 
 # telemetry packets
 11015 {
@@ -57,6 +54,10 @@ MAGN_Z       4 float signed little
     CURR_5V0
     VOLT_5V0
     PWER_5V0
+}
+
+13000 {
+    POTATO_ADC        
 }
 
 13100 {

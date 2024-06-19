@@ -36,8 +36,10 @@ def parse_and_send(line, udp_socket):
         print(f"{value1} {value2} {value3}")
 
         # Update rolling averages
-        avg1 = rolling_average(values1, value1)
-        avg2 = rolling_average(values2, value2)
+        # avg1 = rolling_average(values1, value1)
+        # avg2 = rolling_average(values2, value2)
+        avg1 = 0
+        avg2 = 0
         avg3 = rolling_average(values3, value3)
 
         packed_data = struct.pack(struct_format, avg1, avg2, avg3)

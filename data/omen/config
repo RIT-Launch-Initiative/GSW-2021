@@ -1,0 +1,124 @@
+name = void
+protocol = udp
+triggers = triggers
+
+
+RKT_APRS_LAT  8 float signed big
+RKT_APRS_LONG 8 float signed big
+RKT_APRS_ALT  8 float signed big
+PAY_APRS_LAT  8 float signed big
+PAY_APRS_LONG 8 float signed big
+PAY_APRS_ALT  8 float signed big
+RKT_ALT_MAX   8 float signed
+PAY_ALT_MAX   8 float signed
+RKT_ZVELOCITY 8 float signed
+PAY_ZVELOCITY 8 float signed
+
+# Radio Module (Transmitter)
+GNSS_LATITUDE  8 float signed little
+GNSS_LONGITUDE 8 float signed little
+GNSS_ALTITUDE  4 float signed little
+# TODO ADD MORE GNSS DATA (num sats)
+
+# Radio Module (Receiver)
+LORA_RSSI           2 int signed little
+LORA_SNR            1 int signed little
+NUM_LORA_PACKETS    2 int unsigned little 
+
+# Power Module
+CURR_BATT  4 float signed little
+VOLT_BATT  4 float signed little
+PWER_BATT  4 float signed little
+CURR_3V3   4 float signed little
+VOLT_3V3   4 float signed little
+PWER_3V3   4 float signed little
+CURR_5V0   4 float signed little
+VOLT_5V0   4 float signed little
+PWER_5V0   4 float signed little
+
+# Sensor Module
+LSM_ACCEL_X      4 float signed little 
+LSM_ACCEL_Y      4 float signed little 
+LSM_ACCEL_Z      4 float signed little 
+ADX_ACCEL_X      4 float signed little 
+ADX_ACCEL_Y      4 float signed little 
+ADX_ACCEL_Z      4 float signed little 
+PRESS_MS5611 4 float signed little
+TEMP_MS5611  4 float signed little
+PRESS_BMP388 4 float signed little
+TEMP_BMP388  4 float signed little
+GYRO_X       4 float signed little
+GYRO_Y       4 float signed little
+GYRO_Z       4 float signed little
+MAGN_X       4 float signed little 
+MAGN_Y       4 float signed little 
+MAGN_Z       4 float signed little 
+
+#
+# telemetry packets
+8080 {
+    RKT_APRS_LAT
+    RKT_APRS_LONG
+    RKT_APRS_ALT
+}
+
+8081 {
+    PAY_APRS_LAT
+    PAY_APRS_LONG
+    PAY_APRS_ALT
+}
+
+11015 {
+    CURR_BATT
+    VOLT_BATT
+    PWER_BATT
+    CURR_3V3
+    VOLT_3V3
+    PWER_3V3
+    CURR_5V0
+    VOLT_5V0
+    PWER_5V0
+}
+
+13100 {
+    LSM_ACCEL_X
+    LSM_ACCEL_Y
+    LSM_ACCEL_Z
+    ADX_ACCEL_X
+    ADX_ACCEL_Y
+    ADX_ACCEL_Z
+    PRESS_MS5611
+    TEMP_MS5611
+    PRESS_BMP388
+    TEMP_BMP388
+    GYRO_X
+    GYRO_Y
+    GYRO_Z
+    MAGN_X
+    MAGN_Y
+    MAGN_Z
+}
+
+12020 {
+    GNSS_LATITUDE
+    GNSS_LONGITUDE
+    GNSS_ALTITUDE
+}
+
+12000 {
+    NUM_LORA_PACKETS
+    LORA_RSSI
+    LORA_SNR
+}
+
+
+# virtual telemetry
+virtual {
+    RKT_ALT_MAX
+    RKT_ZVELOCITY
+}
+
+virtual {
+    PAY_ALT_MAX
+    PAY_ZVELOCITY
+}
